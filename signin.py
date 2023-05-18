@@ -33,10 +33,3 @@ print(user_dict)
 login_email = input("Enter your email to login: ")
 login_password = input("Enter your password to login: ")
 new_user.login(login_email, login_password)
-
-        
-
-        
-       
-    
-   
