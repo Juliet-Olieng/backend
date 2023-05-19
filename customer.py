@@ -1,31 +1,44 @@
-
 class Customer:
     def __init__(self, name, email):
         self.name = name
         self.email = email
         self.cart = []
-    def get_name(self):
-        return self.name
-    def get_email(self):
-        return self.email
-    def get_cart(self):
-        return self.cart
+
     def add_to_cart(self, product):
         self.cart.append(product)
-        return "Product added to cart successfully"
-    def place_order(self):
-        if not self.cart:
-            return "Cart is empty"
-        order_total = sum(product["price"] for product in self.cart)
-        order = {"customer": self.name, "email": self.email, "total": order_total}
-        self.cart = []
-        return order
-customer = Customer("John Doe", "johndoe@example.com")
-print(customer.get_name())      # Output: John Doe
-print(customer.get_email())     # Output: johndoe@example.com
-customer.add_to_cart("Apple")
-customer.add_to_cart("Banana")
-print(customer.get_cart())      # Output: ['Apple', 'Banana']
-order = customer.place_order()
-print(order)                    # Output: {'customer': 'John Doe', 'email': 'johndoe@example.com', 'total': 0}
-print(customer.get_cart())      # Output: []
+        print(f"{product} added to cart!")
+
+    def remove_from_cart(self, product):
+        if product in self.cart:
+            self.cart.remove(product)
+            print(f"{product} removed from cart!")
+        else:
+            print(f"{product} is not in your cart.")
+
+    def view_cart(self):
+        if self.cart:
+            print("Your cart:")
+            for product in self.cart:
+                print(product)
+        else:
+            print("Your cart is empty.")
+
+    def checkout(self):
+        if self.cart:
+            print("Checking out...")
+            # Additional logic for processing the checkout and payment can be added here
+            self.cart = []
+            print("Thank you for shopping with us!")
+        else:
+            print("Your cart is empty. Nothing to checkout.")
+
+# Example usage:
+customer = Customer("Eunice Musenyia", "eunicemusenyia@gmail.com")
+customer.add_to_cart("Product 1")
+customer.add_to_cart("Product 2")
+customer.add_to_cart("Product 3")
+customer.view_cart()
+customer.remove_from_cart("Product 2")
+customer.view_cart()
+customer.checkout()
+
