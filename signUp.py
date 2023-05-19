@@ -5,19 +5,19 @@ class User:
         self.password=password
     def sign_up(self):#returns the dictionary containing the user information
         signup= {
-            "name": self.name,
+            "username": self.username,
             "email": self.email,
             "password": self.password,
          
         }
         return signup
-    def signUP(self,name,email,password):
+    def signUP(self,username,email,password):
         if len(password) > 8:
             print("Password should not be greater than 8 characters.")
         else:
             self.password = password
         print("User signed up successfully!")
-name = input("Enter your name: ")
+username = input("Enter your name: ")
 email = input("Enter your email: ")
 password = input("Enter your password: ")
 new_customer = User(username,email,password)
@@ -27,7 +27,5 @@ print(new_customer.sign_up)
 
         
 
-        
-       
     
      
