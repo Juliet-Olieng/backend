@@ -18,9 +18,9 @@ class User:#initialising the init class with the init method
         return user_dict
     def login(self, email, password):#checks if the email and password mathches the user information
         if self.email == email and self.password == password:
-            print("Login successful")
+            return("Login successful")
         else:
-            print("Wrong password and email,please try again")
+            return("Wrong password and email,please try again")
 #prompts the user to enter their details
 name = input("Enter your name: ")
 email = input("Enter your email: ")

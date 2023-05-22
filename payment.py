@@ -27,13 +27,13 @@ def generate_payment_receipt(payment_details, transaction_id):
 
 
 # Usage example
-payment_details = {
-    'amount': 100.00,
-    'payment_method': 'Credit Card',
-    'date': '2023-05-18'
-}
+# payment_details = {
+#     'amount': 100.00,
+#     'payment_method': 'Credit Card',
+#     'date': '2023-05-18'
+# }
 
-transaction_id = 'ABC123XYZ'
+# transaction_id = 'ABC123XYZ'
 
-receipt = generate_payment_receipt(payment_details, transaction_id)
-print(receipt)
+# receipt = generate_payment_receipt(payment_details, transaction_id)
+# print(receipt)

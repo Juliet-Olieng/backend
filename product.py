@@ -55,22 +55,22 @@ class Product:
             return f"{self.name} is out of stock"
 
 
-# Example usage
-apple = Product("Apple", 1.99, 10)
+# # Example usage
+# apple = Product("Apple", 1.99, 10)
 
-print(apple.get_name())      # Output: Apple
-print(apple.get_stock())     # Output: 10
+# print(apple.get_name())      # Output: Apple
+# print(apple.get_stock())     # Output: 10
 
-apple.update_stock(-3)
-print(apple.get_stock())     # Output: 7
+# apple.update_stock(-3)
+# print(apple.get_stock())     # Output: 7
 
-print(apple.is_available())  # Output: True
+# print(apple.is_available())  # Output: True
 
-print(apple.purchase(5))    # Output: Purchased 5 Apple(s)
-print(apple.get_stock())     # Output: 2
+# print(apple.purchase(5))    # Output: Purchased 5 Apple(s)
+# print(apple.get_stock())     # Output: 2
 
-print(apple.purchase(10))   # Output: Insufficient stock for Apple
-print(apple.get_stock())     # Output: 2
+# print(apple.purchase(10))   # Output: Insufficient stock for Apple
+# print(apple.get_stock())     # Output: 2
 
-apple.update_stock(5)
-print(apple.get_stock())     # Output: 7
+# apple.update_stock(5)
+# print(apple.get_stock())     # Output: 7

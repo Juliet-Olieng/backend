@@ -13,21 +13,14 @@ class User:
         return signup
     def signUP(self,name,email,password):
         if len(password) > 8:
-            print("Password should not be greater than 8 characters.")
+            return("Password should not be greater than 8 characters.")
         else:
             self.password = password
-        print("User signed up successfully!")
+        return("User signed up successfully!")
 name = input("Enter your name: ")
 email = input("Enter your email: ")
 password = input("Enter your password: ")
 new_customer = User(username,email,password)
 print(new_customer.sign_up)
-       
-        
-
-        
-
-        
-       
-    
+         
      
