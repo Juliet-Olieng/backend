@@ -23,6 +23,7 @@ class Customer:
         else:
             return("Your cart is empty.")
 
+
     def checkout(self):
         if self.cart:
             return("Checking out...")
